@@ -1,0 +1,17 @@
+<plugin id="com.chelseatravel.sunmi" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SunmiPlugin</name>
+    <description>Plugin to integrate Sunmi Printer SDK</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, sunmi, printer</keywords>
+
+    <platform name="android">
+        <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest">
+            <queries>
+                <package android:name="woyou.aidlservice.jiuiv5" />
+            </queries>
+        </config-file>
+
+        <framework src="com.sunmi:printerlibrary:1.0.15" />
+        <source-file src="src/android/SunmiPlugin.java" target-dir="src/main/java/com/chelseatravel/sunmi" />
+    </platform>
+</plugin>
